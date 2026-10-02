@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "within-person-truthful-reference"
+version = "0.1.0"
+description = "Bounded within-person truthful-reference correction of participant-independent scores"
+requires-python = ">=3.10,<3.11"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<10"]
+
+[project.scripts]
+tr-primary = "tr_deception.pipeline:primary_main"
+tr-heads = "tr_deception.pipeline:heads_main"
+tr-fusion = "tr_deception.pipeline:fusion_main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

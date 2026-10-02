@@ -1,0 +1,9 @@
+dataset: MU3D
+embedding_dim: 768
+K: 1
+outer_folds: 5
+base_C: 0.001
+rho: 0.01
+delta: ln2
+bootstrap_draws: 5000
+seed: 20260722

@@ -1,0 +1,8 @@
+dataset: DOLOS
+embedding_dim: 768
+K: 3
+base_C: 0.001
+rho: 0.01
+delta: ln2
+bootstrap_draws: 5000
+seed: 20260722
