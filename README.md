@@ -28,7 +28,7 @@ For the three core test files, install the test extra with `pip install -e '.[te
 
 ## Data preparation
 
-Obtain DOLOS from the original authors or official dataset source. Obtain MU3D according to the original provider's agreement. This repository distributes no videos, audio, transcripts, embeddings, participant metadata or dataset split files, and provides no download mirror.
+Obtain DOLOS through [NTU ROSE Lab's official dataset page](https://rose1.ntu.edu.sg/dataset/DOLOS/), which provides the request process and research-use terms. Obtain MU3D through [Miami University Scholarly Commons](https://sc.lib.miamioh.edu/items/79ac38da-cb8e-4eff-be92-ee8765a5c72c), following the provider's usage-agreement instructions. This repository distributes no videos, audio, transcripts, embeddings, participant metadata or dataset split files, and provides no download mirror.
 
 Prepare a metadata CSV with `sample_id,participant_id,label,embedding_row,truthful_reference_eligibility`, plus a floating-point NPY embedding matrix of shape `[N,768]`. Labels are 0=truthful and 1=deceptive. The boolean eligibility field accepts true/false or 1/0. CSV integer columns use decimal integer tokens; fractional or missing values are rejected. IDs and embedding rows must be unique, row indices in range, and vectors finite and L2 normalized. The code joins by explicit embedding_row.
 
